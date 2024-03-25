@@ -1,0 +1,239 @@
+Script started on 2024-03-19 16:17:56+05:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="122" LINES="35"]
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo lxc stop container
+[?2004l[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo lxc list
+[?2004l+-----------+---------+------+------+-----------+-----------+
+|   NAME    |  STATE  | IPV4 | IPV6 |   TYPE    | SNAPSHOTS |
++-----------+---------+------+------+-----------+-----------+
+| container | STOPPED |      |      | CONTAINER | 0         |
++-----------+---------+------+------+-----------+-----------+
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo lxc list[C[1P list[1P list[1P listd liste listl liste listt liste list[C[C[C[C[C[K[K[K[Kcon[C[1@l[1@x[1@c[1@ [C[C[C[C[C[C[C[C[C[Ctainer
+[?2004l[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo lxc delete containerlist[Kstop containerexit[Knautilus /home/devops/[K[1Pdolphin[K[K[K[K[K[K[Ksudo lxd init
+[?2004lWould you like to use LXD clustering? (yes/no) [default=no]: 
+Do you want to configure a new storage pool? (yes/no) [default=yes]: 
+Name of the new storage pool [default=default]: 
+The requested storage pool "default" already exists. Please choose another name.
+Name of the new storage pool [default=default]: 
+The requested storage pool "default" already exists. Please choose another name.
+Name of the new storage pool [default=default]: 
+The requested storage pool "default" already exists. Please choose another name.
+Name of the new storage pool [default=default]: 
+The requested storage pool "default" already exists. Please choose another name.
+Name of the new storage pool [default=default]: ^C
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# [7msudo lxc launch ubuntu:22.04 container[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo lxc launch ubuntu:22.04 container1
+[?2004lCreating container1
+Starting container1
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo lxc launch ubuntu:22.04 container1d init[Kc launch ubuntu:22.04 container1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksudo lxc launch ubuntu:22.04 container1[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Klist
+[?2004l+------------+---------+---------------------+-----------------------------------------------+-----------+-----------+
+|    NAME    |  STATE  |        IPV4         |                     IPV6                      |   TYPE    | SNAPSHOTS |
++------------+---------+---------------------+-----------------------------------------------+-----------+-----------+
+| container1 | RUNNING | 10.131.79.97 (eth0) | fd42:b52e:2b23:a471:216:3eff:fe89:b63d (eth0) | CONTAINER | 0         |
++------------+---------+---------------------+-----------------------------------------------+-----------+-----------+
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# lxc network list
+[?2004l+--------+----------+---------+----------------+---------------------------+-------------+---------+---------+
+|  NAME  |   TYPE   | MANAGED |      IPV4      |           IPV6            | DESCRIPTION | USED BY |  STATE  |
++--------+----------+---------+----------------+---------------------------+-------------+---------+---------+
+| enp0s3 | physical | NO      |                |                           |             | 0       |         |
++--------+----------+---------+----------------+---------------------------+-------------+---------+---------+
+| enp0s8 | physical | NO      |                |                           |             | 0       |         |
++--------+----------+---------+----------------+---------------------------+-------------+---------+---------+
+| lxdbr0 | bridge   | YES     | 10.131.79.1/24 | fd42:b52e:2b23:a471::1/64 |             | 2       | CREATED |
++--------+----------+---------+----------------+---------------------------+-------------+---------+---------+
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# lxc network list[3Psudo lxc[C[C[C[C[Caunch ubuntu:22.04 container1[K[K[K[K[K[K[K[K[K[Klxdbro[K0
+[?2004lCreating lxdbr0
+Starting lxdbr0
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo lxc launch ubuntu:22.04 lxdbr0[19Plxc network list
+[?2004l+--------+----------+---------+----------------+---------------------------+-------------+---------+---------+
+|  NAME  |   TYPE   | MANAGED |      IPV4      |           IPV6            | DESCRIPTION | USED BY |  STATE  |
++--------+----------+---------+----------------+---------------------------+-------------+---------+---------+
+| enp0s3 | physical | NO      |                |                           |             | 0       |         |
++--------+----------+---------+----------------+---------------------------+-------------+---------+---------+
+| enp0s8 | physical | NO      |                |                           |             | 0       |         |
++--------+----------+---------+----------------+---------------------------+-------------+---------+---------+
+| lxdbr0 | bridge   | YES     | 10.131.79.1/24 | fd42:b52e:2b23:a471::1/64 |             | 3       | CREATED |
++--------+----------+---------+----------------+---------------------------+-------------+---------+---------+
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# lxc network listsudo lxc launch ubuntu:22.04 lxdbr0[19Plxc network list[3Psudo lxc[C[C[C[C[C
+[?2004l+------------+---------+---------------------+-----------------------------------------------+-----------+-----------+
+|    NAME    |  STATE  |        IPV4         |                     IPV6                      |   TYPE    | SNAPSHOTS |
++------------+---------+---------------------+-----------------------------------------------+-----------+-----------+
+| container1 | RUNNING | 10.131.79.97 (eth0) | fd42:b52e:2b23:a471:216:3eff:fe89:b63d (eth0) | CONTAINER | 0         |
++------------+---------+---------------------+-----------------------------------------------+-----------+-----------+
+| lxdbr0     | RUNNING | 10.131.79.95 (eth0) | fd42:b52e:2b23:a471:216:3eff:fe7f:6db3 (eth0) | CONTAINER | 0         |
++------------+---------+---------------------+-----------------------------------------------+-----------+-----------+
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo lxc list[K[K[K[Kexec cpnta[K[K[K[Kontau[Kiner1 /bin/bash
+[?2004l[?2004h]0;root@container1: ~root@container1:~# sudo apt install [C[C[C[1@-[1@g[1@e[1@t[C[C[C[C[C[C[C[C[Capache2
+[?2004lReading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 10%Reading package lists... 10%Reading package lists... 15%Reading package lists... 15%Reading package lists... 16%Reading package lists... 16%Reading package lists... 16%Reading package lists... 16%Reading package lists... 29%Reading package lists... 29%Reading package lists... 37%Reading package lists... 37%Reading package lists... 52%Reading package lists... 52%Reading package lists... 60%Reading package lists... 60%Reading package lists... 70%Reading package lists... 70%Reading package lists... 77%Reading package lists... 77%Reading package lists... 91%Reading package lists... 91%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils bzip2 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap liblua5.3-0
+  mailcap mime-support ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser bzip2-doc
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils bzip2 libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  liblua5.3-0 mailcap mime-support ssl-cert
+0 upgraded, 13 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2138 kB of archives.
+After this operation, 8521 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libapr1 amd64 1.7.0-8ubuntu0.22.04.1 [108 kB]
+0% [1 libapr1 12.7 kB/108 kB 12%]                                 6% [Working]            Get:2 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1 amd64 1.6.1-5ubuntu4.22.04.2 [92.8 kB]
+6% [2 libaprutil1 2318 B/92.8 kB 2%]                                    Get:3 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-5ubuntu4.22.04.2 [11.3 kB]
+11% [3 libaprutil1-dbd-sqlite3 4179 B/11.3 kB 37%]                                                  13% [Working]             Get:4 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 libaprutil1-ldap amd64 1.6.1-5ubuntu4.22.04.2 [9170 B]
+             Get:5 http://archive.ubuntu.com/ubuntu jammy/main amd64 liblua5.3-0 amd64 5.3.6-1build1 [140 kB]
+15% [5 liblua5.3-0 11.7 kB/140 kB 8%]                                     21% [Waiting for headers]                         Get:6 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-bin amd64 2.4.52-1ubuntu4.8 [1346 kB]
+21% [6 apache2-bin 2691 B/1346 kB 0%]38% [6 apache2-bin 437 kB/1346 kB 32%]52% [6 apache2-bin 822 kB/1346 kB 61%]70% [6 apache2-bin 1310 kB/1346 kB 97%]                                       73% [Waiting for headers]                         Get:7 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-data all 2.4.52-1ubuntu4.8 [165 kB]
+74% [7 apache2-data 11.2 kB/165 kB 7%]                                      81% [Waiting for headers]                         Get:8 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2-utils amd64 2.4.52-1ubuntu4.8 [88.6 kB]
+81% [8 apache2-utils 2038 B/88.6 kB 2%]                                       86% [Waiting for headers]                         Get:9 http://archive.ubuntu.com/ubuntu jammy/main amd64 mailcap all 3.70+nmu1ubuntu1 [23.8 kB]
+86% [9 mailcap 1545 B/23.8 kB 6%]                                 88% [Waiting for headers]                         Get:10 http://archive.ubuntu.com/ubuntu jammy/main amd64 mime-support all 3.66 [3696 B]
+                         Get:11 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 apache2 amd64 2.4.52-1ubuntu4.8 [97.9 kB]
+90% [11 apache2 7241 B/97.9 kB 7%]                                  95% [Working]             Get:12 http://archive.ubuntu.com/ubuntu jammy/main amd64 bzip2 amd64 1.0.8-5build1 [34.8 kB]
+95% [12 bzip2 2639 B/34.8 kB 8%]                                98% [Waiting for headers]                         Get:13 http://archive.ubuntu.com/ubuntu jammy/main amd64 ssl-cert all 1.1.2 [17.4 kB]
+98% [13 ssl-cert 2319 B/17.4 kB 13%]                                    100% [Working]              Fetched 2138 kB in 3s (680 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 33929 files and directories currently installed.)
+Preparing to unpack .../00-libapr1_1.7.0-8ubuntu0.22.04.1_amd64.deb ...
+Unpacking libapr1:amd64 (1.7.0-8ubuntu0.22.04.1) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../01-libaprutil1_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../02-libaprutil1-dbd-sqlite3_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../03-libaprutil1-ldap_1.6.1-5ubuntu4.22.04.2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Selecting previously unselected package liblua5.3-0:amd64.
+Preparing to unpack .../04-liblua5.3-0_5.3.6-1build1_amd64.deb ...
+Unpacking liblua5.3-0:amd64 (5.3.6-1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../05-apache2-bin_2.4.52-1ubuntu4.8_amd64.deb ...
+Unpacking apache2-bin (2.4.52-1ubuntu4.8) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../06-apache2-data_2.4.52-1ubuntu4.8_all.deb ...
+Unpacking apache2-data (2.4.52-1ubuntu4.8) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../07-apache2-utils_2.4.52-1ubuntu4.8_amd64.deb ...
+Unpacking apache2-utils (2.4.52-1ubuntu4.8) ...
+Selecting previously unselected package mailcap.
+Preparing to unpack .../08-mailcap_3.70+nmu1ubuntu1_all.deb ...
+Unpacking mailcap (3.70+nmu1ubuntu1) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../09-mime-support_3.66_all.deb ...
+Unpacking mime-support (3.66) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../10-apache2_2.4.52-1ubuntu4.8_amd64.deb ...
+Unpacking apache2 (2.4.52-1ubuntu4.8) ...
+Selecting previously unselected package bzip2.
+Preparing to unpack .../11-bzip2_1.0.8-5build1_amd64.deb ...
+Unpacking bzip2 (1.0.8-5build1) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../12-ssl-cert_1.1.2_all.deb ...
+Unpacking ssl-cert (1.1.2) ...
+Setting up libapr1:amd64 (1.7.0-8ubuntu0.22.04.1) ...
+Setting up bzip2 (1.0.8-5build1) ...
+Setting up ssl-cert (1.1.2) ...
+Setting up liblua5.3-0:amd64 (5.3.6-1build1) ...
+Setting up apache2-data (2.4.52-1ubuntu4.8) ...
+Setting up mailcap (3.70+nmu1ubuntu1) ...
+Setting up libaprutil1:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Setting up mime-support (3.66) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-5ubuntu4.22.04.2) ...
+Setting up apache2-utils (2.4.52-1ubuntu4.8) ...
+Setting up apache2-bin (2.4.52-1ubuntu4.8) ...
+Setting up apache2 (2.4.52-1ubuntu4.8) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for ufw (0.36.1-4ubuntu0.1) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for libc-bin (2.35-0ubuntu3.6) ...
+Scanning processes... [                                                                                                  ]Scanning processes... [===                                                                                               ]Scanning processes... [======                                                                                            ]Scanning processes... [=========                                                                                         ]Scanning processes... [============                                                                                      ]Scanning processes... [===============                                                                                   ]Scanning processes... [==================                                                                                ]Scanning processes... [======================                                                                            ]Scanning processes... [=========================                                                                         ]Scanning processes... [============================                                                                      ]Scanning processes... [===============================                                                                   ]Scanning processes... [==================================                                                                ]Scanning processes... [=====================================                                                             ]Scanning processes... [=========================================                                                         ]Scanning processes... [============================================                                                      ]Scanning processes... [===============================================                                                   ]Scanning processes... [==================================================                                                ]Scanning processes... [=====================================================                                             ]Scanning processes... [========================================================                                          ]Scanning processes... [============================================================                                      ]Scanning processes... [===============================================================                                   ]Scanning processes... [==================================================================                                ]Scanning processes... [=====================================================================                             ]Scanning processes... [========================================================================                          ]Scanning processes... [===========================================================================                       ]Scanning processes... [===============================================================================                   ]Scanning processes... [==================================================================================                ]Scanning processes... [=====================================================================================             ]Scanning processes... [========================================================================================          ]Scanning processes... [===========================================================================================       ]Scanning processes... [==============================================================================================    ]Scanning processes... [==================================================================================================]Scanning processes...                                                                                                     
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[?2004h]0;root@container1: ~root@container1:~# sudo apt-get install apache2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ksudo apt-get install apache2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kexir[Kt
+[?2004lexit
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# script -k
+[?2004lscript: invalid option -- 'k'
+Try 'script --help' for more information.
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# script -k[C[1@s[1@u[1@d[1@o[1@ 
+[?2004lscript: invalid option -- 'k'
+Try 'script --help' for more information.
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# script -- version
+[?2004lScript started, output log file is 'version'.
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# exitnautilus /home/devops/[K /home/devops/exit[K[Kscript --version
+[?2004lscript from util-linux 2.37.2
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# script --version[K[K[K[K[K[K[K[K[Kstio[K[Kop
+[?2004lScript started, output log file is 'stop'.
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# exitnautilus /home/devops/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexit[K[K[K[Kscript exit
+[?2004lScript started, output log file is 'exit'.
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo script -k
+[?2004lscript: invalid option -- 'k'
+Try 'script --help' for more information.
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo script -k[KL[KK
+[?2004lscript: invalid option -- 'K'
+Try 'script --help' for more information.
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo script -K[K-help
+[?2004l
+Usage:
+ script [options] [file]
+
+Make a typescript of a terminal session.
+
+Options:
+ -I, --log-in <file>           log stdin to file
+ -O, --log-out <file>          log stdout to file (default)
+ -B, --log-io <file>           log stdin and stdout to file
+
+ -T, --log-timing <file>       log timing information to file
+ -t[<file>], --timing[=<file>] deprecated alias to -T (default file is stderr)
+ -m, --logging-format <name>   force to 'classic' or 'advanced' format
+
+ -a, --append                  append to the log file
+ -c, --command <command>       run command rather than interactive shell
+ -e, --return                  return exit code of the child process
+ -f, --flush                   run flush after each write
+     --force                   use output file even when it is a link
+ -E, --echo <when>             echo input in session (auto, always or never)
+ -o, --output-limit <size>     terminate if output files exceed size
+ -q, --quiet                   be quiet
+
+ -h, --help                    display this help
+ -V, --version                 display version
+
+For more details see script(1).
+[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# sudo script --help[K[K[K[K[Kq
+[?2004l[?2004h]0;root@devops-VirtualBox: /home/devopsroot@devops-VirtualBox:/home/devops# exit
